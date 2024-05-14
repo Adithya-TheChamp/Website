@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novi Chess Club</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="topnav">
+                <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa fa-fw fa-gamepad"></i> Games</button>
+                    <div class="dropdown-content">
+                        <a href="Trex.html">Trex Game</a>
+                        <a href="Balloon.html">Balloon Game</a>
+                        <a href="Zombie.html">Zombie Game</a>
+                        <a href="Kangaroo.html">Kangaroo Game</a>
+                    </div>
+                </div>
+                <a href="About.html"><i class="fa fa-fw fa-info-circle"></i> About</a>
+                <a href="Projects.html"><i class="fa fa-fw fa-folder-open"></i> Chess Club</a>
+                <a href="#"><i class="fa fa-fw fa-sign-in"></i> Login</a>
+            </nav>
+        </div>
+    </header>
+        <div class="info">
+            <h1>Welcome to Novi Chess Club</h1>
+            <p>We run tournaments on chess.com every week. Our club has 268 members and has almost 150 tournaments run.</p>
+        </div>
+        <script>
+            function fetchGameInfo(username){
+                console.log("testing")
+                const apiUrl = `https://api.chess.com/pub/player/${username}/games`
+                fetch(apiUrl).then(response=>response.json()).then(data=>{
+                    const game = data.games[0]
+                    const gameInfo = `
+                    <h1>gameDetails</h1>
+                    `
+                    document.getElementById('.leaderboard-container').innerHTML=gameInfo
+                })
+            }
+            fetchGameInfo('Adithya-TheChamp')
+        </script>
+        <div class="leaderboard-container">
+            <h2>Top Rating Leaders</h2>
+            <div class="leaderboard">
+            <div class="leader">
+                <img src="ronav.png" alt="Profile Picture" class="profile-pic">
+                <span class="medal gold">🥇</span>
+                <div class="player-rating-container">
+                    <span class="player">NetBoss12</span>
+                    <span class="rating">2001</span>
+                </div>
+            </div>
+            <div class="leader">
+                <img src="UsaUnknown.png" alt="Profile Picture" class="profile-pic">
+                <span class="medal silver">🥈</span>
+                <div class="player-rating-container">
+                    <span class="player">UsaUnknown</span>
+                    <span class="rating">1803</span>
+                </div>
+            </div>
+            <div class="leader">
+                <img src="hero.jpg" alt="Profile Picture" class="profile-pic">
+                <span class="medal bronze">🥉</span>
+                <div class="player-rating-container">
+                    <span class="player">kusmahesh</span>
+                    <span class="rating">1753</span>
+                </div>
+            </div>   
+        </div>
+    </div>         
+</body>
+</html>

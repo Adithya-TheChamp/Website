@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="topnav">
+                <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa fa-fw fa-gamepad"></i> Games</button>
+                    <div class="dropdown-content">
+                        <a href="Trex.html">Trex Game</a>
+                        <a href="Balloon.html">Balloon Game</a>
+                        <a href="Zombie.html">Zombie Game</a>
+                        <a href="Kangaroo.html">Kangaroo Game</a>
+                    </div>
+                </div>
+                <a href="About.html"><i class="fa fa-fw fa-info-circle"></i> About</a>
+                <a href="Projects.html"><i class="fa fa-fw fa-folder-open"></i> Chess Club</a>
+                <a href="#"><i class="fa fa-fw fa-sign-in"></i> Login</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="info">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Explore the games designed using JavaScript and other libraries.</p>
+        </section>
+        <div class="slideshow-container">
+            <div class="slideshow">
+              <div class="slide">
+                <img src="trex.png" alt="Game 1">
+              </div>
+              <div class="slide">
+                <img src="balloon.png" alt="Game 2">
+              </div>
+              <div class="slide">
+                <img src="zombie.png" alt="Game 3">
+              </div>
+              <div class="slide">
+                <img src="kangaroo.png" alt="Game 4">
+              </div>
+              <div class="dots">
+                <span class="dot" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+              </div>
+            </div>
+          </div>
+    <footer class="site-footer">
+        <p>&copy; 2024 Adithya Balaji. All rights reserved.</p>
+        <nav>
+            <ul>
+               <li><a href="Privacy.html">Privacy Policy</a></li>
+               <li><a href="Terms.html">Terms of Use</a></li>
+               <li><a href="badithya@gmail.com">Contact Me</a></li>
+            </ul>
+         </nav>
+</footer>
+<script src="script.js"></script> </body>
+</html>
